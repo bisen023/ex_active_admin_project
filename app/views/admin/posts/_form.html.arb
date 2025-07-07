@@ -1,0 +1,8 @@
+active_admin_form_for [ :admin, resource ] do |f|
+  inputs :title, :description, :is_status
+  actions
+
+  panel "text" do
+    "this is the form"
+  end
+end

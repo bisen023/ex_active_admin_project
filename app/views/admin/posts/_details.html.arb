@@ -1,0 +1,6 @@
+div do
+	
+	h1 "h"
+	h2 "g"
+	link_to "h"
+end
