@@ -43,6 +43,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  #For test cases
+  gem 'rspec-rails', '~> 8.0.0'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -51,6 +55,14 @@ group :development do
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [ :ruby ]
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem 'factory_bot_rails'
+end
 
 gem "activeadmin", "~> 3.3.0"
 
@@ -62,10 +74,3 @@ gem "pundit"
 gem "bootstrap"
 gem "sassc-rails", "2.1.2"
 gem "rubocop"
-end
-
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-end

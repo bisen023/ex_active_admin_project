@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  scope :post_above_id_by_20
     decorate_with PostDecorator
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -17,13 +18,13 @@ ActiveAdmin.register Post do
   filter :title
   actions :all, except: []
 
-  order_by(:title) do |order_clause|
-   if order_clause.order == "desc"
-     [ order_clause.to_sql, "NULLS LAST" ].join(" ")
-   else
-     [ order_clause.to_sql, "NULLS FIRST" ].join(" ")
-   end
-end
+    # order_by(:title) do |order_clause|
+    #  if order_clause.order == "desc"
+    #    [ order_clause.to_sql, "NULLS LAST" ].join(" ")
+    #  else
+    #    [ order_clause.to_sql, "NULLS FIRST" ].join(" ")
+    #  end
+    # end
 
  controller do
     def csv_filename
@@ -47,6 +48,7 @@ end
       end
     end
 
+    column :id
     column :description, sortable: false
     column :created_at
     column :is_status
