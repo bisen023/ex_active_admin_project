@@ -147,11 +147,6 @@ GEM
     factory_bot_rails (6.5.0)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     ffi (1.17.2)
     formtastic (5.0.0)
       actionpack (>= 6.0.0)
@@ -242,7 +237,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (6.6.0)
+    puma (6.6.1)
       nio4r (~> 2.0)
     pundit (2.5.0)
       activesupport (>= 3.0.0)
@@ -423,7 +418,6 @@ DEPENDENCIES
   draper
   error_highlight (>= 0.4.0)
   factory_bot_rails
-  factory_girl_rails
   importmap-rails
   jbuilder
   pg (~> 1.1)
